@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HBStickerView" customModule="HBStickerViewOrResizableView" customModuleProvider="target">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="HBStickerView"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="btnBottomBoundry" destination="JTo-KU-hDJ" id="wgk-TI-zvS"/>
+                <outlet property="btnCross" destination="0kn-5W-USE" id="LrG-hY-gBp"/>
+                <outlet property="btnLeftBoundry" destination="adg-Hf-Sk1" id="Gr6-Mb-2XW"/>
+                <outlet property="btnResize" destination="M8l-3T-Uyd" id="Bxb-zU-MGj"/>
+                <outlet property="btnRightBoundry" destination="dbj-IN-13b" id="jv6-rl-0ld"/>
+                <outlet property="btnRotate" destination="mdq-ha-1z6" id="dya-aj-js1"/>
+                <outlet property="btnTopBoundry" destination="ln1-es-HwC" id="eeT-WO-UKG"/>
+                <outlet property="imageView" destination="9Qq-2Q-x3U" id="8Uc-LV-fjc"/>
+                <outlet property="viewControls" destination="wJH-H4-I4H" id="gAV-B4-KgP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="331"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main" translatesAutoresizingMaskIntoConstraints="NO" id="9Qq-2Q-x3U">
+                    <rect key="frame" x="24" y="24" width="320" height="283"/>
+                </imageView>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJH-H4-I4H" customClass="HBView" customModule="HBStickerViewOrResizableView" customModuleProvider="target">
+                    <rect key="frame" x="24" y="24" width="320" height="283"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdq-ha-1z6">
+                    <rect key="frame" x="328" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="H0d-vl-QfS"/>
+                        <constraint firstAttribute="width" constant="40" id="dZo-fq-YSF"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="16" minY="8" maxX="8" maxY="16"/>
+                    <state key="normal" image="reload"/>
+                    <connections>
+                        <action selector="btnRotateAction:" destination="-1" eventType="touchUpInside" id="ZUZ-c0-Ej9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kn-5W-USE">
+                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="1sj-OX-E27"/>
+                        <constraint firstAttribute="height" constant="40" id="83y-Ye-BHr"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="8" minY="8" maxX="16" maxY="16"/>
+                    <state key="normal" image="cross"/>
+                    <connections>
+                        <action selector="btnCrossAction:" destination="-1" eventType="touchUpInside" id="Fmq-PF-E2m"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8l-3T-Uyd">
+                    <rect key="frame" x="328" y="291" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="IMa-BZ-AZE"/>
+                        <constraint firstAttribute="width" constant="40" id="Ky2-AY-S6F"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="16" minY="16" maxX="8" maxY="8"/>
+                    <state key="normal" image="expand"/>
+                    <connections>
+                        <action selector="btnResizeAction:" destination="-1" eventType="touchUpInside" id="6d0-2A-J2K"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbj-IN-13b" customClass="HBButton" customModule="HBStickerViewOrResizableView" customModuleProvider="target">
+                    <rect key="frame" x="344" y="123" width="30" height="85"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="☐">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnRightBoundryAction:" destination="-1" eventType="touchUpInside" id="q1j-pt-6mh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adg-Hf-Sk1" customClass="HBButton" customModule="HBStickerViewOrResizableView" customModuleProvider="target">
+                    <rect key="frame" x="-6" y="123" width="30" height="85.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <inset key="titleEdgeInsets" minX="16" minY="16" maxX="0.0" maxY="16"/>
+                    <state key="normal" title="☐">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnLeftBoundryAction:" destination="-1" eventType="touchUpInside" id="3Kd-dM-goh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ln1-es-HwC" customClass="HBButton" customModule="HBStickerViewOrResizableView" customModuleProvider="target">
+                    <rect key="frame" x="136" y="-1" width="96.5" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="☐">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnTopBoundryAction:" destination="-1" eventType="touchUpInside" id="puO-OO-EV5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTo-KU-hDJ" customClass="HBButton" customModule="HBStickerViewOrResizableView" customModuleProvider="target">
+                    <rect key="frame" x="136" y="305" width="96.5" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="☐">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnBottomBoundryAction:" destination="-1" eventType="touchUpInside" id="Rwc-vk-Xt7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="wJH-H4-I4H" firstAttribute="leading" secondItem="adg-Hf-Sk1" secondAttribute="trailing" id="0L8-KJ-uGw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wJH-H4-I4H" secondAttribute="trailing" constant="24" id="1HL-rP-wu5"/>
+                <constraint firstItem="JTo-KU-hDJ" firstAttribute="width" secondItem="wJH-H4-I4H" secondAttribute="width" multiplier="0.3" id="2QN-Bn-oC1"/>
+                <constraint firstItem="M8l-3T-Uyd" firstAttribute="trailing" secondItem="wJH-H4-I4H" secondAttribute="trailing" constant="24" id="5Re-Mp-Pf3"/>
+                <constraint firstItem="0kn-5W-USE" firstAttribute="top" secondItem="wJH-H4-I4H" secondAttribute="top" constant="-24" id="9F4-dW-Qxa"/>
+                <constraint firstItem="0kn-5W-USE" firstAttribute="leading" secondItem="wJH-H4-I4H" secondAttribute="leading" constant="-24" id="ANY-u5-fVq"/>
+                <constraint firstItem="9Qq-2Q-x3U" firstAttribute="bottom" secondItem="wJH-H4-I4H" secondAttribute="bottom" id="EpF-bZ-g11"/>
+                <constraint firstItem="M8l-3T-Uyd" firstAttribute="bottom" secondItem="wJH-H4-I4H" secondAttribute="bottom" constant="24" id="HiE-gl-kDk"/>
+                <constraint firstItem="mdq-ha-1z6" firstAttribute="trailing" secondItem="wJH-H4-I4H" secondAttribute="trailing" constant="24" id="KPH-d8-8mS"/>
+                <constraint firstItem="mdq-ha-1z6" firstAttribute="top" secondItem="wJH-H4-I4H" secondAttribute="top" constant="-24" id="MYV-Ba-DCR"/>
+                <constraint firstItem="JTo-KU-hDJ" firstAttribute="top" secondItem="wJH-H4-I4H" secondAttribute="bottom" constant="-2" id="Mli-At-zq4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="wJH-H4-I4H" secondAttribute="bottom" constant="24" id="NJp-u3-y0o"/>
+                <constraint firstItem="dbj-IN-13b" firstAttribute="height" secondItem="wJH-H4-I4H" secondAttribute="height" multiplier="0.3" id="Phv-Os-nuw"/>
+                <constraint firstItem="adg-Hf-Sk1" firstAttribute="centerY" secondItem="wJH-H4-I4H" secondAttribute="centerY" id="Q4a-yU-fd8"/>
+                <constraint firstItem="JTo-KU-hDJ" firstAttribute="centerX" secondItem="wJH-H4-I4H" secondAttribute="centerX" id="QLk-ya-b9I"/>
+                <constraint firstItem="wJH-H4-I4H" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="Qor-C9-K1Q"/>
+                <constraint firstItem="ln1-es-HwC" firstAttribute="centerX" secondItem="wJH-H4-I4H" secondAttribute="centerX" id="R2m-us-0Tc"/>
+                <constraint firstItem="adg-Hf-Sk1" firstAttribute="height" secondItem="wJH-H4-I4H" secondAttribute="height" multiplier="0.3" id="UvM-lz-6Rb"/>
+                <constraint firstItem="ln1-es-HwC" firstAttribute="width" secondItem="wJH-H4-I4H" secondAttribute="width" multiplier="0.3" id="dCT-HA-KZn"/>
+                <constraint firstItem="wJH-H4-I4H" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="dQl-y9-tKr"/>
+                <constraint firstItem="dbj-IN-13b" firstAttribute="centerY" secondItem="wJH-H4-I4H" secondAttribute="centerY" id="eV0-gg-hKr"/>
+                <constraint firstItem="9Qq-2Q-x3U" firstAttribute="top" secondItem="wJH-H4-I4H" secondAttribute="top" id="hW2-sh-yvB"/>
+                <constraint firstItem="wJH-H4-I4H" firstAttribute="top" secondItem="ln1-es-HwC" secondAttribute="bottom" constant="-2" id="nOs-FI-Yju"/>
+                <constraint firstItem="9Qq-2Q-x3U" firstAttribute="leading" secondItem="wJH-H4-I4H" secondAttribute="leading" id="p8H-E8-HhY"/>
+                <constraint firstItem="9Qq-2Q-x3U" firstAttribute="trailing" secondItem="wJH-H4-I4H" secondAttribute="trailing" id="rXk-Tk-Exl"/>
+                <constraint firstItem="dbj-IN-13b" firstAttribute="leading" secondItem="wJH-H4-I4H" secondAttribute="trailing" id="uaj-tL-mbu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-10" y="-129.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cross" width="24" height="24"/>
+        <image name="expand" width="24" height="24"/>
+        <image name="main" width="120" height="120"/>
+        <image name="reload" width="24" height="24"/>
+    </resources>
+</document>
