@@ -10,7 +10,7 @@
 import UIKit
 class HBXib: UIView {
     var contentView:UIView?
-    @IBInspectable var nibName:String?
+     var nibName:String?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,6 +33,7 @@ class HBXib: UIView {
     }
     
     func xibSetup(){
+        
         guard let view = loadFromNib() else {return}
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
@@ -41,9 +42,10 @@ class HBXib: UIView {
     }
     
     func loadFromNib()->UIView?{
-        guard let nibName = nibName else { return nil}
+        
+        self.nibName = String(describing: type(of: self))
         let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: nibName, bundle: bundle)
+        let nib = UINib(nibName: nibName!, bundle: bundle)
         return nib.instantiate(withOwner: self,
                                options: nil).first as? UIView
     }
