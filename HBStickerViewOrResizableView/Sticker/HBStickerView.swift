@@ -25,6 +25,12 @@ class HBStickerView: HBXib,UIGestureRecognizerDelegate {
     @IBOutlet weak var viewControls: HBView!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBInspectable var stickIcon : UIImage?{
+        didSet{
+            imageView?.image = stickIcon
+        }
+    }
+    
     
     //MARK:- Variables and Constants
     var delegate:HBStickerViewDelegate?
@@ -133,7 +139,7 @@ class HBStickerView: HBXib,UIGestureRecognizerDelegate {
     @objc func tapRecognized(tap:UITapGestureRecognizer){
         showControls()
         if isBringToFront{
-        self.superview?.bringSubview(toFront: self)
+            self.superview?.bringSubviewToFront(self)
         }
     }
     

@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,11 +29,11 @@
             <rect key="frame" x="0.0" y="0.0" width="368" height="331"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main" translatesAutoresizingMaskIntoConstraints="NO" id="9Qq-2Q-x3U">
-                    <rect key="frame" x="24" y="24" width="320" height="283"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dance_girl" translatesAutoresizingMaskIntoConstraints="NO" id="9Qq-2Q-x3U">
+                    <rect key="frame" x="24" y="44" width="320" height="263"/>
                 </imageView>
                 <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJH-H4-I4H" customClass="HBView" customModule="HBStickerViewOrResizableView" customModuleProvider="target">
-                    <rect key="frame" x="24" y="24" width="320" height="283"/>
+                    <rect key="frame" x="24" y="44" width="320" height="263"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -48,7 +45,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdq-ha-1z6">
-                    <rect key="frame" x="328" y="0.0" width="40" height="40"/>
+                    <rect key="frame" x="328" y="20" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="H0d-vl-QfS"/>
                         <constraint firstAttribute="width" constant="40" id="dZo-fq-YSF"/>
@@ -60,7 +57,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kn-5W-USE">
-                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                    <rect key="frame" x="0.0" y="20" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="1sj-OX-E27"/>
                         <constraint firstAttribute="height" constant="40" id="83y-Ye-BHr"/>
@@ -83,8 +80,8 @@
                         <action selector="btnResizeAction:" destination="-1" eventType="touchUpInside" id="6d0-2A-J2K"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbj-IN-13b" customClass="HBButton" customModule="HBStickerViewOrResizableView" customModuleProvider="target">
-                    <rect key="frame" x="344" y="123" width="30" height="85"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbj-IN-13b" customClass="HBButton" customModule="HBStickerViewOrResizableView" customModuleProvider="target">
+                    <rect key="frame" x="344" y="136" width="30" height="79"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="☐">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,8 +90,8 @@
                         <action selector="btnRightBoundryAction:" destination="-1" eventType="touchUpInside" id="q1j-pt-6mh"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adg-Hf-Sk1" customClass="HBButton" customModule="HBStickerViewOrResizableView" customModuleProvider="target">
-                    <rect key="frame" x="-6" y="123" width="30" height="85.5"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adg-Hf-Sk1" customClass="HBButton" customModule="HBStickerViewOrResizableView" customModuleProvider="target">
+                    <rect key="frame" x="-6" y="136" width="30" height="79"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <inset key="titleEdgeInsets" minX="16" minY="16" maxX="0.0" maxY="16"/>
                     <state key="normal" title="☐">
@@ -104,8 +101,8 @@
                         <action selector="btnLeftBoundryAction:" destination="-1" eventType="touchUpInside" id="3Kd-dM-goh"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ln1-es-HwC" customClass="HBButton" customModule="HBStickerViewOrResizableView" customModuleProvider="target">
-                    <rect key="frame" x="136" y="-1" width="96.5" height="27"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ln1-es-HwC" customClass="HBButton" customModule="HBStickerViewOrResizableView" customModuleProvider="target">
+                    <rect key="frame" x="136" y="19" width="96" height="27"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="☐">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,8 +111,8 @@
                         <action selector="btnTopBoundryAction:" destination="-1" eventType="touchUpInside" id="puO-OO-EV5"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTo-KU-hDJ" customClass="HBButton" customModule="HBStickerViewOrResizableView" customModuleProvider="target">
-                    <rect key="frame" x="136" y="305" width="96.5" height="27"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTo-KU-hDJ" customClass="HBButton" customModule="HBStickerViewOrResizableView" customModuleProvider="target">
+                    <rect key="frame" x="136" y="305" width="96" height="27"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="☐">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -125,6 +122,7 @@
                     </connections>
                 </button>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="wJH-H4-I4H" firstAttribute="leading" secondItem="adg-Hf-Sk1" secondAttribute="trailing" id="0L8-KJ-uGw"/>
@@ -155,14 +153,27 @@
                 <constraint firstItem="dbj-IN-13b" firstAttribute="leading" secondItem="wJH-H4-I4H" secondAttribute="trailing" id="uaj-tL-mbu"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-10" y="-129.5"/>
+            <point key="canvasLocation" x="-16" y="-116.49175412293854"/>
         </view>
     </objects>
+    <designables>
+        <designable name="JTo-KU-hDJ">
+            <size key="intrinsicContentSize" width="30" height="27"/>
+        </designable>
+        <designable name="adg-Hf-Sk1">
+            <size key="intrinsicContentSize" width="30" height="27"/>
+        </designable>
+        <designable name="dbj-IN-13b">
+            <size key="intrinsicContentSize" width="30" height="27"/>
+        </designable>
+        <designable name="ln1-es-HwC">
+            <size key="intrinsicContentSize" width="30" height="27"/>
+        </designable>
+    </designables>
     <resources>
         <image name="cross" width="24" height="24"/>
+        <image name="dance_girl" width="256" height="256"/>
         <image name="expand" width="24" height="24"/>
-        <image name="main" width="120" height="120"/>
         <image name="reload" width="24" height="24"/>
     </resources>
 </document>
