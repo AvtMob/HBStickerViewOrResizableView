@@ -1,7 +1,7 @@
 # HBStickerViewOrResizableView
 Use HBStickerView for photo editing and sticker decorations in applications of ios swift
 
-#You can watch a demo video [here](https://youtube.com/shorts/Y1SlVdGY50c)
+# You can watch a demo video [here](https://youtube.com/shorts/Y1SlVdGY50c)
 
 # Project preview
 
