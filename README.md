@@ -30,12 +30,9 @@ Step 3: Build and Run.
   **stickerview.hideControls()**
   
   ### Check controls state with
-    stickerview.isControlsHidden
     
     ```swift
-      if(stickerview.isControlsHidden){
-       //do something here
-     }
+      if(stickerview.isControlsHidden){}
     ```
     
 ## How to remove
