@@ -30,11 +30,10 @@ Step 3: Build and Run.
   **stickerview.hideControls()**
   
   ### Check controls state with
-    
-    ```swift
-        let stickerview = HBStickerView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+  ```swift
+            let stickerview = HBStickerView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         stickerview.isControlsHidden
-    ```
+```
     
 ## How to remove
 ```swift
