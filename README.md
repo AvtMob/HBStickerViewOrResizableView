@@ -56,3 +56,6 @@ Step 3: Build and Run.
     }
 ```
 
+## If you appreciate my work, consider [buying me](https://www.paypal.com/paypalme/hbdev/5usd) a cup of ☕️ to keep me recharged 🤘🏼 
+[[PayPal](https://www.paypal.com/paypalme/hbdev/5usd)]
+
