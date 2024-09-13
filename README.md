@@ -14,11 +14,11 @@ Use HBStickerView for photo editing and sticker decorations in applications of i
 # How to Use
 
 ## First case
-Step 1: Take a view in your storyboard
+Step 1: Add a view to your storyboard.
 
-Step 2: Set Custom class of view to HBStickerView
+Step 2: Set the custom class of the view to HBStickerView.
 
-Step 3: Build and Run.
+Step 3: Build and run the project.
 
 ## Second case
 
