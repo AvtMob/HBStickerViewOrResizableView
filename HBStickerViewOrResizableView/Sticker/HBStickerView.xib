@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,6 +15,7 @@
             <connections>
                 <outlet property="btnBottomBoundry" destination="JTo-KU-hDJ" id="wgk-TI-zvS"/>
                 <outlet property="btnCross" destination="0kn-5W-USE" id="LrG-hY-gBp"/>
+                <outlet property="btnFlip" destination="Sgn-VF-EeP" id="G9r-h5-Ikf"/>
                 <outlet property="btnLeftBoundry" destination="adg-Hf-Sk1" id="Gr6-Mb-2XW"/>
                 <outlet property="btnResize" destination="M8l-3T-Uyd" id="Bxb-zU-MGj"/>
                 <outlet property="btnRightBoundry" destination="dbj-IN-13b" id="jv6-rl-0ld"/>
@@ -121,6 +122,18 @@
                         <action selector="btnBottomBoundryAction:" destination="-1" eventType="touchUpInside" id="Rwc-vk-Xt7"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgn-VF-EeP">
+                    <rect key="frame" x="0.0" y="291" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Iwg-hB-lnM"/>
+                        <constraint firstAttribute="width" constant="40" id="cBe-OK-dFC"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="8" minY="16" maxX="16" maxY="8"/>
+                    <state key="normal" image="Flip"/>
+                    <connections>
+                        <action selector="btnFlipAction:" destination="-1" eventType="touchUpInside" id="EqG-Fh-ev8"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -138,6 +151,7 @@
                 <constraint firstItem="JTo-KU-hDJ" firstAttribute="top" secondItem="wJH-H4-I4H" secondAttribute="bottom" constant="-2" id="Mli-At-zq4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="wJH-H4-I4H" secondAttribute="bottom" constant="24" id="NJp-u3-y0o"/>
                 <constraint firstItem="dbj-IN-13b" firstAttribute="height" secondItem="wJH-H4-I4H" secondAttribute="height" multiplier="0.3" id="Phv-Os-nuw"/>
+                <constraint firstItem="Sgn-VF-EeP" firstAttribute="bottom" secondItem="wJH-H4-I4H" secondAttribute="bottom" constant="24" id="Pie-wM-Rgx"/>
                 <constraint firstItem="adg-Hf-Sk1" firstAttribute="centerY" secondItem="wJH-H4-I4H" secondAttribute="centerY" id="Q4a-yU-fd8"/>
                 <constraint firstItem="JTo-KU-hDJ" firstAttribute="centerX" secondItem="wJH-H4-I4H" secondAttribute="centerX" id="QLk-ya-b9I"/>
                 <constraint firstItem="wJH-H4-I4H" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="Qor-C9-K1Q"/>
@@ -151,26 +165,14 @@
                 <constraint firstItem="9Qq-2Q-x3U" firstAttribute="leading" secondItem="wJH-H4-I4H" secondAttribute="leading" id="p8H-E8-HhY"/>
                 <constraint firstItem="9Qq-2Q-x3U" firstAttribute="trailing" secondItem="wJH-H4-I4H" secondAttribute="trailing" id="rXk-Tk-Exl"/>
                 <constraint firstItem="dbj-IN-13b" firstAttribute="leading" secondItem="wJH-H4-I4H" secondAttribute="trailing" id="uaj-tL-mbu"/>
+                <constraint firstItem="Sgn-VF-EeP" firstAttribute="leading" secondItem="wJH-H4-I4H" secondAttribute="leading" constant="-24" id="yTi-lp-Xv7"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-16" y="-116.49175412293854"/>
         </view>
     </objects>
-    <designables>
-        <designable name="JTo-KU-hDJ">
-            <size key="intrinsicContentSize" width="30" height="27"/>
-        </designable>
-        <designable name="adg-Hf-Sk1">
-            <size key="intrinsicContentSize" width="30" height="27"/>
-        </designable>
-        <designable name="dbj-IN-13b">
-            <size key="intrinsicContentSize" width="30" height="27"/>
-        </designable>
-        <designable name="ln1-es-HwC">
-            <size key="intrinsicContentSize" width="30" height="27"/>
-        </designable>
-    </designables>
     <resources>
+        <image name="Flip" width="24" height="24"/>
         <image name="cross" width="24" height="24"/>
         <image name="dance_girl" width="256" height="256"/>
         <image name="expand" width="24" height="24"/>

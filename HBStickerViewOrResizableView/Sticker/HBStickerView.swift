@@ -18,6 +18,7 @@ class HBStickerView: HBXib,UIGestureRecognizerDelegate {
     @IBOutlet weak var btnCross:HBButton!
     @IBOutlet weak var btnResize:HBButton!
     @IBOutlet weak var btnRotate:HBButton!
+    @IBOutlet weak var btnFlip:HBButton!
     @IBOutlet weak var btnLeftBoundry:HBButton!
     @IBOutlet weak var btnRightBoundry:HBButton!
     @IBOutlet weak var btnTopBoundry:HBButton!
@@ -73,6 +74,11 @@ class HBStickerView: HBXib,UIGestureRecognizerDelegate {
     @IBAction func btnRotateAction(_ sender: HBButton) {
         enableMoveRestriction = false
     }
+    @IBAction func btnFlipAction(_ sender: HBButton) {
+        UIView.animate(withDuration: 0.3) {
+            self.imageView.transform = self.imageView!.transform.scaledBy(x: -1, y: 1)
+        }
+    }
     @IBAction func btnLeftBoundryAction(_ sender: HBButton) {
         
     }
@@ -118,6 +124,7 @@ class HBStickerView: HBXib,UIGestureRecognizerDelegate {
         self.btnRotate.isHidden = true
         self.btnResize.isHidden = true
         self.btnCross.isHidden = true
+        self.btnFlip.isHidden = true
         self.btnLeftBoundry.isHidden = true
         self.btnRightBoundry.isHidden = true
         self.btnTopBoundry.isHidden = true
@@ -129,6 +136,7 @@ class HBStickerView: HBXib,UIGestureRecognizerDelegate {
             self.btnRotate.isHidden = false
             self.btnResize.isHidden = false
             self.btnCross.isHidden = false
+            self.btnFlip.isHidden = false
             self.btnLeftBoundry.isHidden = false
             self.btnRightBoundry.isHidden = false
             self.btnTopBoundry.isHidden = false
